@@ -1,0 +1,72 @@
+import { NavLink, Outlet } from "react-router-dom";
+
+const PrivateRouter = () => {
+    return (
+        <div className="container mt-4">
+            <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                <div className="container">
+                    <ul className="navbar-nav">
+                        <li className="nav-item"><NavLink className="nav-link" to="/admin">Home</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/admin/account">Account</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/admin/product">Product</NavLink></li>
+                        <li className="nav-item"><NavLink className="nav-link" to="/admin/order">Order</NavLink></li>
+                    </ul>
+                </div>
+            </nav>
+            <Outlet />
+        </div>
+    );
+};
+
+export default PrivateRouter;
+
+
+
+
+
+import { NavLink } from "react-router-dom";
+
+const AdminIndex = () => {
+    return (
+        <div>
+            <h1>Admin Dashboard</h1>
+        </div>
+    );
+};
+
+export default AdminIndex;
+
+
+
+
+
+
+const Account = () => {
+    return <h1>Account Page</h1>;
+};
+
+export default Account;
+
+
+
+
+
+
+const Product = () => {
+    return <h1>Product Page</h1>;
+};
+
+export default Product;
+
+
+
+
+
+
+
+
+const Order = () => {
+    return <h1>Order Page</h1>;
+};
+
+export default Order;
